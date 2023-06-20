@@ -98,6 +98,8 @@ public class Login extends JFrame {
 		contentPane.add(txtSenha);
 
 		JButton btnLogin = new JButton("Logar");
+		btnLogin.setForeground(SystemColor.textHighlight);
+		btnLogin.setBackground(SystemColor.textHighlight);
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String nome = txtNome.getText();

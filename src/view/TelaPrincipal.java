@@ -73,7 +73,7 @@ public class TelaPrincipal extends JFrame {
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
-		JMenu menuProd = new JMenu("Produtos");
+		JMenu menuProd = new JMenu("Cadastrar");
 		menuProd.setFont(new Font("Segoe UI", Font.BOLD, 12));
 		menuBar.add(menuProd);
 		
@@ -90,27 +90,18 @@ public class TelaPrincipal extends JFrame {
 		});
 		menuProd.add(menuCadProd);
 		
-		JMenuItem menuListProd = new JMenuItem("Listagem de Produtos");
-		menuListProd.addActionListener(new ActionListener() {
+		JMenuItem MenuCadCli = new JMenuItem("Cadastrar Clientes");
+		MenuCadCli.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				fecharJFrameInternoAtual();
-				ListagemProdutos lp = new ListagemProdutos();
-				jFrameInterno.getContentPane().add(lp);
-				jFrameInternoAtual = lp;
-				lp.setVisible(true);
+				CadastrarClientes cc = new CadastrarClientes();
+				jFrameInterno.getContentPane().add(cc);
+				jFrameInternoAtual = cc;
+				cc.setVisible(true);
 				
 			}
 		});
-		menuProd.add(menuListProd);
-		
-		JMenuItem menuPesqProd = new JMenuItem("Pesquisa de Produtos");
-		menuProd.add(menuPesqProd);
-		
-		JMenu menuRelat = new JMenu("Relatorios");
-		menuBar.add(menuRelat);
-		
-		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Estoque Atual");
-		menuRelat.add(mntmNewMenuItem_1);
+		menuProd.add(MenuCadCli);
 		
 		JMenu menuAjuda = new JMenu("Ajuda");
 		menuBar.add(menuAjuda);
@@ -196,6 +187,4 @@ public class TelaPrincipal extends JFrame {
 			jFrameInternoAtual = null;
 		}
 	}
-	
-	
 }
